@@ -42,7 +42,7 @@ const resltEquacao = () => {
       <h1>CALCULADORA</h1>
     </header>
     <InputNumeros :primeiro-numero="evento => estado.numero1 = evento.target.value " :segundo-numero="evento => estado.numero2 = evento.target.value "/>
-    <Equacoes :tipo-equacao="resltEquacao()"/>
+    <Equacoes :tipo-equacao="evento => estado.equacao = evento.target.value"/>
     <p class="text-center p-4">O resultado da equação é <span class="text-danger">{{ resltEquacao() }}</span></p>
   </div>
 </template>
